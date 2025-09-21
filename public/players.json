@@ -1,0 +1,122 @@
+[
+  {
+    "player_image": "https://i.ibb.co/KpdZTB7q/Shakib-Al-Hasan.jpg",
+    "player_name": "Shakib Al Hasan",
+    "player_country": "Bangladesh",
+    "player_role": "All-rounder",
+    "rating": 16,
+    "batting_style": "Left-hand bat",
+    "bowling_style": "Left-arm orthodox spin",
+    "price": "15,000,000 USD"
+  },
+  {
+    "player_image": "https://i.ibb.co/MkcDBsbh/Suryakumar-Yadav.jpg",
+    "player_name": "Suryakumar Yadav",
+    "player_country": "India",
+    "player_role": "Batter",
+    "rating": 16,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "",
+    "price": "15,000,000 USD"
+  },
+  {
+    "player_image": "https://i.ibb.co/YBmhpSfj/Virat-Kohli-Chiku-RCB-Cricketer-Indian-4-K-HD.jpg",
+    "player_name": "Virat Kohli",
+    "player_country": "India",
+    "player_role": "Batter",
+    "rating": 14,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "",
+    "price": "15,000,000 USD"
+  },
+  {
+    "player_image": "https://i.ibb.co/WWx7tnz2/Shubman-gill-wallpaper.jpg",
+    "player_name": "Shubman Gill",
+    "player_country": "India",
+    "player_role": "Batter",
+    "rating": 14,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "",
+    "price": "15,000,000 USD"
+  },
+  {
+    "player_image": "https://i.ibb.co/4gJR7xjJ/Mitchell-Marsh.jpg",
+    "player_name": "Mitchell Marsh",
+    "player_country": "Australia",
+    "player_role": "All-rounder",
+    "rating": 14,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm fast",
+    "price": "15,000,000 USD"
+  },
+  {
+    "player_image": "https://i.ibb.co/fd1F9xRs/Shreyas-Iyer.jpg",
+    "player_name": "Shreyas Iyer",
+    "player_country": "India",
+    "player_role": "Batter",
+    "rating": 14,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "",
+    "price": "15,000,000 USD"
+  },
+  {
+    "player_image": "https://i.ibb.co/MkcDBsbh/Suryakumar-Yadav.jpg",
+    "player_name": "Yashasvi Jaiswal",
+    "player_country": "India",
+    "player_role": "Batter",
+    "rating": 14,
+    "batting_style": "Left-hand bat",
+    "bowling_style": "",
+    "price": "15,000,000 USD"
+  },
+  {
+    "player_image": "https://i.ibb.co/d07qNBc1/Nicholas-Pooran.jpg",
+    "player_name": "Nicholas Pooran",
+    "player_country": "West Indies",
+    "player-role": "Wicketkeeper-batter",
+    "rating": 14,
+    "batting_style": "Left-hand bat",
+    "bowling_style": "",
+    "price": "15,000,000 USD"
+  },
+  {
+    "player_image": "https://i.ibb.co/yBRKCb25/Jos-Buttler.jpg",
+    "player_name": "Jos Buttler",
+    "player_country": "England",
+    "player_role": "Wicketkeeper-batter",
+    "rating": 14,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "",
+    "price": "15,000,000 USD"
+  },
+  {
+    "player_image": "https://i.ibb.co/Hppmv7z9/Mashrafee.jpg",
+    "player-name": "Mashrafe Bin Mortaza",
+    "player_country": "Bangladesh",
+    "player_role": "Bowler",
+    "rating": 16,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm fast",
+    "price": "15,000,000 USD"
+  },
+  {
+    "player_image": "https://i.ibb.co/przw7dMT/Afridi.jpg",
+    "player_name": "Shaheen Shah Afridi",
+    "player_country": "Pakistan",
+    "player_role": "All-rounder",
+    "rating": 15,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "Right-arm orthodox spin",
+    "price": "15,000,000 USD"
+  },
+  {
+    "player_image": "https://i.ibb.co/GQ2QM3cv/AB-Div.jpg",
+    "player_name": "AB de Villiers",
+    "player_country": "South Africa",
+    "player_role": "All-rounder",
+    "rating": 14,
+    "batting_style": "Right-hand bat",
+    "bowling_style": "",
+    "price": "15,000,000 USD"
+  }
+]
