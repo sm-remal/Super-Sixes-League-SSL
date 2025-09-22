@@ -1,8 +1,10 @@
 import { Suspense, useState } from 'react'
+import { ToastContainer } from 'react-toastify';
 import './App.css'
 import AvailablePlayers from './components/AvailablePlayers/AvailablePlayers'
 import Navbar from './components/Navbar/Navbar'
 import SelectedPlayers from './components/SelectedPlayers/SelectedPlayers'
+import Banner from './components/Banner/Banner';
 
 
 const fetchPlayers = async () => {
@@ -14,7 +16,7 @@ const playersPromise = fetchPlayers();
 function App() {
 
 const [toggle, setToggle] = useState(true)
-const [availableBalance, setAvailableBalance] = useState(95000000);
+const [availableBalance, setAvailableBalance] = useState(156000000);
 const [purchasedPlayer, setPurchasedPlayer] = useState([]);
 
 const removePlayer = (playerDelete) => {
@@ -27,13 +29,14 @@ const removePlayer = (playerDelete) => {
   return (
     <>
       <Navbar availableBalance = {availableBalance}></Navbar>
+      <Banner></Banner>
       <div className='max-w-screen-2xl m-auto max-xl:max-w-7xl max-lg:max-w-5xl max-md:max-w-3xl max-sm:max-w-screen-sm px-5 flex justify-between items-center'>
-        <h2 class="text-base md:text-xl lg:text-5xl font-bold">{
+        <h2 class="text-base md:text-xl lg:text-3xl 2xl:text-5xl font-bold">{
           toggle === true ? "Available Players" : `Selected Players (${purchasedPlayer.length}/6)`
           }</h2>
         <div className='flex items-center'>
-          <button onClick={() => setToggle(true)} className={`${toggle? "bg-violet-700":""} px-4 py-1 border-1 border-r-0 ${toggle===true? "text-white": ""} rounded-l-xl text-xs md:text-lg`}>Available</button>
-          <button onClick={() => setToggle(false)} className={`${toggle === false? "bg-violet-700":""} ${toggle === false ? "text-white": ""} px-4 py-1 border-1 border-l-0 rounded-r-xl text-xs md:text-lg`}>Selected (<span>{purchasedPlayer.length}</span>)</button>
+          <button onClick={() => setToggle(true)} className={`${toggle? "bg-blue-800":""} px-4 py-2 border-1 border-r-0 ${toggle===true? "text-white": ""} rounded-l-xl text-xs md:text-lg font-semibold`}>Available</button>
+          <button onClick={() => setToggle(false)} className={`${toggle === false? "bg-blue-800":""} ${toggle === false ? "text-white": ""} px-4 py-2 border-1 border-l-0 rounded-r-xl text-xs md:text-lg font-semibold`}>Selected (<span>{purchasedPlayer.length}</span>)</button>
         
         </div>
       </div>
@@ -42,6 +45,7 @@ const removePlayer = (playerDelete) => {
         <AvailablePlayers purchasedPlayer={purchasedPlayer} setPurchasedPlayer={setPurchasedPlayer} availableBalance={availableBalance} setAvailableBalance={setAvailableBalance} playersPromise = {playersPromise}></AvailablePlayers>
       </Suspense> : <SelectedPlayers removePlayer={removePlayer} purchasedPlayer={purchasedPlayer}></SelectedPlayers>
       }
+      <ToastContainer />
     </>
   )
 }

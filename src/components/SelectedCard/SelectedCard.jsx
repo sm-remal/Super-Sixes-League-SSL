@@ -6,15 +6,15 @@ const SelectedCard = ({playerSelect, removePlayer}) => {
         removePlayer(playerSelect);
     }
     return (
-        <div className='flex justify-between items-center border-1 md:border-2 border-gray-300 rounded-lg md:rounded-3xl md:shadow-sm p-3 md:p-5 my-3 md:my-7 overflow-hidden hover:shadow-lg transform hover:scale-103 transition duration-300 ease-out'>
+        <div className='flex justify-between items-center border-1 md:border-2 border-gray-300 rounded-lg md:rounded-2xl md:shadow-sm p-3 2xl:p-5 my-3 md:my-7 overflow-hidden hover:shadow-lg transform hover:scale-103 transition duration-300 ease-out'>
                 <div className='flex gap-3 md:gap-5 items-center'>
-                    <img src={playerSelect.player_image} alt="" className='w-[60px] h-[60px] md:w-[120px] md:h-[130px] rounded-xl md:rounded-2xl' />
-                    <div className='md:space-y-5'>
-                        <h3 class="text-base md:text-lg lg:text-4xl font-bold">{playerSelect.player_name}</h3>
-                        <h4 class="text-base md:text-lg lg:text-2xl font-medium text-gray-600">{playerSelect.player_role}</h4>
+                    <img src={playerSelect.player_image} alt="" className='w-[60px] h-[60px] md:w-[80px] md:h-[90px] 2xl:w-[120px] 2xl:h-[130px] rounded-xl md:rounded-xl' />
+                    <div className='md:space-y-3 2xl:space-y-5'>
+                        <h3 class="text-base md:text-xl 2xl:text-4xl font-bold">{playerSelect.player_name}</h3>
+                        <h4 class="text-base md:text-lg 2xl:text-2xl font-medium text-gray-500">{playerSelect.player_role}</h4>
                     </div>
                 </div>
-                <img onClick={handleRemove} src={deleteIcon} alt="" className='md:w-[50px] md:h-[50px] cursor-pointer' />
+                <img onClick={handleRemove} src={deleteIcon} alt="" className='2xl:w-[70px] 2xl:h-[50px] cursor-pointer pr-6' />
             </div>
     );
 };
