@@ -5,6 +5,7 @@ import AvailablePlayers from './components/AvailablePlayers/AvailablePlayers'
 import Navbar from './components/Navbar/Navbar'
 import SelectedPlayers from './components/SelectedPlayers/SelectedPlayers'
 import Banner from './components/Banner/Banner';
+import Footer from './components/Footer/Footer';
 
 
 const fetchPlayers = async () => {
@@ -46,6 +47,7 @@ const removePlayer = (playerDelete) => {
       </Suspense> : <SelectedPlayers removePlayer={removePlayer} purchasedPlayer={purchasedPlayer}></SelectedPlayers>
       }
       <ToastContainer />
+      <Footer></Footer>
     </>
   )
 }
