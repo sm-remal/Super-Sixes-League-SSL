@@ -14,22 +14,33 @@ const playersPromise = fetchPlayers();
 function App() {
 
 const [toggle, setToggle] = useState(true)
-const [availableBalance, setAvailableBalance] = useState(95000000)
+const [availableBalance, setAvailableBalance] = useState(95000000);
+const [purchasedPlayer, setPurchasedPlayer] = useState([]);
+
+const removePlayer = (playerDelete) => {
+  console.log(playerDelete)
+  const filteredPlayer = purchasedPlayer.filter(storePlayer => storePlayer.player_name !== playerDelete.player_name)
+  setPurchasedPlayer(filteredPlayer);
+  setAvailableBalance(availableBalance + parseInt(playerDelete.price.split("USD").join("").split(",").join("")))
+}
+
   return (
     <>
       <Navbar availableBalance = {availableBalance}></Navbar>
       <div className='max-w-screen-2xl m-auto max-xl:max-w-7xl max-lg:max-w-5xl max-md:max-w-3xl max-sm:max-w-screen-sm px-5 flex justify-between items-center'>
-        <h2 class="text-base md:text-lg lg:text-2xl font-bold">Available Players</h2>
+        <h2 class="text-base md:text-xl lg:text-5xl font-bold">{
+          toggle === true ? "Available Players" : `Selected Players (${purchasedPlayer.length}/6)`
+          }</h2>
         <div className='flex items-center'>
           <button onClick={() => setToggle(true)} className={`${toggle? "bg-violet-700":""} px-4 py-1 border-1 border-r-0 ${toggle===true? "text-white": ""} rounded-l-xl text-xs md:text-lg`}>Available</button>
-          <button onClick={() => setToggle(false)} className={`${toggle === false? "bg-violet-700":""} ${toggle === false ? "text-white": ""} px-4 py-1 border-1 border-l-0 rounded-r-xl text-xs md:text-lg`}>Selected (<span>0</span>)</button>
+          <button onClick={() => setToggle(false)} className={`${toggle === false? "bg-violet-700":""} ${toggle === false ? "text-white": ""} px-4 py-1 border-1 border-l-0 rounded-r-xl text-xs md:text-lg`}>Selected (<span>{purchasedPlayer.length}</span>)</button>
         
         </div>
       </div>
       {
         toggle === true ? <Suspense fallback = {<span className="loading loading-spinner text-error"></span>}>
-        <AvailablePlayers availableBalance={availableBalance} setAvailableBalance={setAvailableBalance} playersPromise = {playersPromise}></AvailablePlayers>
-      </Suspense> : <SelectedPlayers></SelectedPlayers>
+        <AvailablePlayers purchasedPlayer={purchasedPlayer} setPurchasedPlayer={setPurchasedPlayer} availableBalance={availableBalance} setAvailableBalance={setAvailableBalance} playersPromise = {playersPromise}></AvailablePlayers>
+      </Suspense> : <SelectedPlayers removePlayer={removePlayer} purchasedPlayer={purchasedPlayer}></SelectedPlayers>
       }
     </>
   )
