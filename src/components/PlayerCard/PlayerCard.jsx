@@ -3,16 +3,16 @@ import userImg from '../../assets/user.png'
 import flagImg from '../../assets/flag.png'
 import { toast } from 'react-toastify';
 
-const PlayerCard = ({player, setAvailableBalance, availableBalance, purchasedPlayer, setPurchasedPlayer}) => {
+const PlayerCard = ({ player, setAvailableBalance, availableBalance, purchasedPlayer, setPurchasedPlayer }) => {
     const [isSelected, setIsSelected] = useState(false);
 
     const handleSelected = (playerData) => {
         const playerPrice = parseInt(playerData.price.split("USD").join("").split(",").join(""))
-        if(availableBalance < playerPrice){
+        if (availableBalance < playerPrice) {
             toast("Not Enough Coins !!!");
             return;
         }
-        if(purchasedPlayer.length === 6){
+        if (purchasedPlayer.length === 6) {
             toast("6 Players Already Selected !!!")
             return;
         }
@@ -22,8 +22,8 @@ const PlayerCard = ({player, setAvailableBalance, availableBalance, purchasedPla
         toast("Player Purchased !!")
     }
     return (
-        <div className="card bg-base-100 w-full shadow-md p-5">
-            <figure class="overflow-hidden rounded-lg shadow-lg relative group">
+        <div className="card bg-base-100 w-full shadow-md p-5 md:mb-28">
+            <figure className="overflow-hidden rounded-lg shadow-lg relative group">
                 <img src={player.player_image} alt="" className='w-full md:h-[300px] object-cover transform group-hover:scale-105 transition duration-300' />
             </figure>
             <div className="">
@@ -47,7 +47,7 @@ const PlayerCard = ({player, setAvailableBalance, availableBalance, purchasedPla
                     <div className='flex justify-between items-center'>
                         <p className='text-base md:text-md lg:text-lg font-semibold'>Price: <span>{player.price}</span></p>
                         <button disabled={isSelected} onClick={() => handleSelected(player)}
-                             className="btn btn-primary">{isSelected ? "Selected" : "Choose Player"}</button>
+                            className="btn btn-primary">{isSelected ? "Selected" : "Choose Player"}</button>
                     </div>
                 </div>
             </div>
